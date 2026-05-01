@@ -1,0 +1,1388 @@
+local genv = getgenv()
+local fenv = getfenv()
+
+print('ngl you should join https://discord.gg/t4mW56Y8Sx')
+
+local _call5 = game:GetService('TweenService')
+local _call7 = game:GetService('CoreGui')
+local _call9 = game:GetService('Players')
+local _call11 = game:GetService('RunService')
+local _LocalPlayer12 = _call9.LocalPlayer
+
+game:GetService('HttpService')
+
+fenv.ShowLoading = function(...)
+    local _15_vararg1, _15_vararg2 = ...
+    local _call17 = Instance.new('ScreenGui')
+
+    _call17.Name = 'LoadingScreen'
+    _call17.IgnoreGuiInset = true
+    _call17.ResetOnSpawn = false
+    _call17.Parent = _call7
+
+    local _call19 = Instance.new('Frame')
+
+    _call19.Size = UDim2.new(1, 0, 1, 0)
+    _call19.BackgroundColor3 = Color3.new(0, 0, 0)
+    _call19.BackgroundTransparency = 1
+    _call19.Parent = _call17
+
+    local _call25 = Instance.new('ImageLabel')
+
+    _call25.AnchorPoint = Vector2.new(0.5, 0.5)
+    _call25.Position = UDim2.new(0.5, 0, 0.5, 0)
+    _call25.Size = UDim2.new(0, 200, 0, 200)
+    _call25.BackgroundTransparency = 1
+    _call25.Image = 'rbxassetid://114561977260841'
+    _call25.ImageTransparency = 1
+    _call25.Parent = _call19
+
+    local _call39 = _call5:Create(_call19, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0})
+
+    _call39:Play()
+
+    local _call49 = _call5:Create(_call25, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 0})
+
+    _call49:Play()
+    task.delay(_15_vararg1, function(...)
+        local _call62 = _call5:Create(_call19, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundTransparency = 1})
+        local _call70 = _call5:Create(_call25, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {ImageTransparency = 1})
+
+        _call62:Play()
+        _call70:Play()
+        _call70.Completed:Wait()
+        _call17:Destroy()
+        _15_vararg2()
+    end)
+end
+
+local _call82 = Instance.new('ImageButton')
+
+_call82.Name = 'UIToggleButton'
+_call82.Size = UDim2.new(0, 60, 0, 60)
+_call82.Position = UDim2.new(0, 10, 0.5, -30)
+_call82.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+_call82.BackgroundTransparency = 0.5
+_call82.Image = 'rbxassetid://114561977260841'
+
+local _call90 = Instance.new('ScreenGui')
+
+_call90.Name = 'ToggleButtonGui'
+_call90.ResetOnSpawn = false
+_call90.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+_call90.Parent = _call7
+_call82.Parent = _call90
+
+local _call94 = Instance.new('UIStroke')
+
+_call94.Color = Color3.fromRGB(0, 255, 255)
+_call94.Thickness = 2
+_call94.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+_call94.Parent = _call82
+
+local _call100 = Instance.new('UICorner')
+
+_call100.CornerRadius = UDim.new(0, 12)
+_call100.Parent = _call82
+
+_call82.InputBegan:Connect(function(...)
+    local _106_vararg1 = ...
+    local _ = _106_vararg1.UserInputType == Enum.UserInputType.MouseButton1
+    local _ = _106_vararg1.UserInputType == Enum.UserInputType.Touch
+end)
+_call82.InputChanged:Connect(function(...) end)
+_call82.MouseButton1Click:Connect(function(...)
+    local _ = fenv.Library
+
+    error("line 3: attempt to index nil with 'Toggle'")
+end)
+
+local _call125 = Instance.new('ScreenGui')
+
+_call125.Name = 'LoadingScreen'
+_call125.IgnoreGuiInset = true
+_call125.ResetOnSpawn = false
+_call125.Parent = _call7
+
+local _call127 = Instance.new('Frame')
+
+_call127.Size = UDim2.new(1, 0, 1, 0)
+_call127.BackgroundColor3 = Color3.new(0, 0, 0)
+_call127.BackgroundTransparency = 1
+_call127.Parent = _call125
+
+local _call133 = Instance.new('ImageLabel')
+
+_call133.AnchorPoint = Vector2.new(0.5, 0.5)
+_call133.Position = UDim2.new(0.5, 0, 0.5, 0)
+_call133.Size = UDim2.new(0, 200, 0, 200)
+_call133.BackgroundTransparency = 1
+_call133.Image = 'rbxassetid://114561977260841'
+_call133.ImageTransparency = 1
+_call133.Parent = _call127
+
+local _call147 = _call5:Create(_call127, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {BackgroundTransparency = 0})
+
+_call147:Play()
+
+local _call157 = _call5:Create(_call133, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 0})
+
+_call157:Play()
+task.delay(3, function(...)
+    local _call170 = _call5:Create(_call127, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {BackgroundTransparency = 1})
+    local _call178 = _call5:Create(_call133, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {ImageTransparency = 1})
+
+    _call170:Play()
+    _call178:Play()
+    _call178.Completed:Wait()
+    _call125:Destroy()
+
+    local _call189 = Color3.fromRGB(255, 0, 0)
+
+    genv.Ego = {
+        Silent = {
+            Normal = {
+                Enabled = true,
+                HitPart = 'HumanoidRootPart',
+                Method = 'Index',
+                Prediction = 0.1257724,
+            },
+            FOV = {
+                Enabled = false,
+                Filled = false,
+                Color = _call189,
+                AutoSelectTarget = false,
+                Mode = 'Middle',
+                ShowFOV = false,
+                Size = 120,
+            },
+        },
+        Targetaim = {
+            enabled = false,
+            oneMethod = false,
+            Method = 'Index',
+            hitpart = 'HumanoidRootPart',
+            prediction = 0.1,
+            predictionEnabled = true,
+            jumpOffset = 0.8,
+        },
+        Highlight = {
+            Enabled = false,
+            Color = Color3.fromRGB(0, 255, 255),
+        },
+        UI = {Notify = true},
+        Camlock = {
+            Prediction = 0.1,
+            HitPart = 'HumanoidRootPart',
+            Smoothness = 0.1,
+            Keybind = 'C',
+            Enabled = true,
+            EasingStyle = Enum.EasingStyle.Sine,
+            EasingDirection = Enum.EasingDirection.InOut,
+        },
+        Resolver = {
+            Enabled = false,
+            Mode = 'MoveDirection',
+        },
+    }
+    genv.Desync = {
+        Enabled = false,
+        Mode = 'Both',
+    }
+    genv.ForceHit = {
+        Enabled = false,
+        ForceFieldCheck = true,
+    }
+    genv.autoair = {
+        enabled = false,
+        delay = 0.1,
+        AirPart = 'RightFoot',
+    }
+    genv.LookAtEnabled = false
+
+    local _call199 = Color3.fromRGB(255, 255, 255)
+
+    genv.crosshair = {
+        enabled = false,
+        radius = 10,
+        spin_max = 200,
+        resize_min = 5,
+        refreshrate = 0,
+        resize = true,
+        resize_speed = 150,
+        width = 1.5,
+        color = _call199,
+        spin_speed = 120,
+        resize_max = 22,
+        position = Vector2.new(0, 0),
+        spin = true,
+        length = 10,
+        spin_style = Enum.EasingStyle.Circular,
+        mode = 'center',
+    }
+    genv.Triggerbot = {
+        Enabled = false,
+        FOV = {
+            Thickness = 1.5,
+            Transparency = 0.35,
+            Filled = false,
+            Color = Color3.fromRGB(0, 0, 139),
+            Visible = false,
+            Size = 14,
+        },
+        IgnoreTools = {
+            [1] = 'katana',
+            [2] = 'knife',
+        },
+        Mode = 'Center',
+        Delay = 0.15,
+        TargetParts = {
+            [1] = 'Head',
+            [2] = 'HumanoidRootPart',
+            [3] = 'LowerTorso',
+            [4] = 'UpperTorso',
+        },
+    }
+    genv.highjump = {
+        enabled = false,
+        power = 120,
+    }
+    genv.cframe = {
+        settings = {
+            enabled = false,
+            speed = 1,
+            showbutton = false,
+        },
+    }
+    genv.WalkSpeed = {
+        Value = 100,
+        Enabled = false,
+    }
+    genv.antilock = {
+        enabled = false,
+        mode = 'Sky',
+    }
+    genv.stile = {
+        hitbox_expander = {
+            Enabled = false,
+            Transparency = 0.7,
+            Color = Color3.fromRGB(209, 206, 255),
+            TargetOnly = false,
+            Size = 10,
+        },
+    }
+    genv.GroundShotDetection = {
+        GroundShotThreshold = 0.5,
+        Enabled = false,
+        DetectionRange = 20,
+    }
+    genv.AutoReloadEnabled = false
+    genv.HitChams = {
+        enabled = false,
+        transparency = 0.4,
+        color = Color3.fromRGB(255, 255, 255),
+        material = Enum.Material.ForceField,
+        duration = 0.3,
+    }
+    genv.hit = {
+        sound_enabled = true,
+        sound_id = 'Neverlose',
+        notify_duration = 1,
+        detection = true,
+        logs = true,
+        sound_volume = 1,
+    }
+    genv.orbit = {
+        enabled = false,
+        height = 5,
+        distance = 10,
+        angle = 0,
+        speed = 400,
+    }
+    genv.cfly = {
+        speed = 50,
+        verticalSpeed = 25,
+        mode = 'Normal',
+        enabled = false,
+    }
+    genv.Genitaliamanskidslammer = {
+        AutoFire = false,
+        RapidFire = false,
+    }
+    genv.InfiniteAmmo = {enabled = false}
+    genv.BulletTP = {Enabled = false}
+
+    local _ = genv.ESP
+    local _call216 = Color3.new(1, 1, 1)
+
+    genv.ESP = {
+        TargetTracerColor = Color3.new(1, 0, 0),
+        TargetTracers = false,
+        HealthBarColor = Color3.new(0, 1, 0),
+        Boxes = false,
+        Names = false,
+        TracerOrigin = 'Up',
+        HealthBars = false,
+        TracerColor = Color3.new(1, 1, 1),
+        Tracers = false,
+        NameColor = _call216,
+        BoxColor = Color3.new(1, 1, 1),
+        TeamCheck = false,
+    }
+    genv.AuraSettings = {
+        AuraBrightness = 1,
+        AuraColor = Color3.fromRGB(255, 255, 255),
+        SelectedAura = 'PointLight',
+        AuraEnabled = false,
+    }
+    genv.EmotesEnabled = false
+    genv.SelectedEmote = 'Floss'
+    genv.EmoteSpeed = 2
+    genv.WallBang = {Enabled = false}
+    genv.AutoStomp = {Enabled = false}
+    fenv.stopCFrameFly = function(...)
+        local _ = _G.__CFFlyLoop
+        local _LocalPlayer224 = _call9.LocalPlayer
+        local _ = _LocalPlayer224.Character
+        local _call228 = _LocalPlayer224.Character:FindFirstChildOfClass('Humanoid')
+        local _call231 = _LocalPlayer224.Character:FindFirstChild('Head')
+
+        _call228.PlatformStand = false
+
+        _call228:ChangeState(Enum.HumanoidStateType.Freefall)
+
+        _call231.Anchored = false
+    end
+    genv.RapidFireEnabled = false
+    genv.InfiniteAmmo = {enabled = false}
+
+    game:GetService('UserInputService')
+
+    local _workspaceCurrentCamera238 = workspace.CurrentCamera
+
+    game:GetService('Debris')
+    game:GetService('TeleportService')
+    game:GetService('HttpService')
+    game:GetService('ReplicatedStorage')
+    _call11.Heartbeat:Connect(function(...) end)
+    Drawing.new('Circle')
+
+    local _call254 = RaycastParams.new()
+
+    _call254.FilterType = Enum.RaycastFilterType.Blacklist
+    _call254.IgnoreWater = true
+
+    local _ = _call9.LocalPlayer
+    local _ = workspace.CurrentCamera
+
+    _call9.PlayerAdded:Connect(function(...)
+        task.wait(2)
+
+        local _call264 = Drawing.new('Square')
+        local _call266 = Drawing.new('Line')
+        local _call268 = Drawing.new('Text')
+        local _call270 = Drawing.new('Line')
+
+        _call264.Thickness = 1
+        _call264.Filled = false
+        _call266.Thickness = 2
+        _call268.Size = 13
+        _call268.Font = 2
+        _call268.Outline = true
+        _call268.Center = true
+        _call270.Thickness = 1
+    end)
+    _call9.PlayerRemoving:Connect(function(...) end)
+    task.spawn(function(...)
+        task.wait(3)
+        coroutine.yield(true, _262_vararg1, {
+            Tracer = _call270,
+            Name = _call268,
+            HealthBar = _call266,
+            Box = _call264,
+        })
+
+        for _281, _281_2 in pairs(_call9:GetPlayers())do
+            coroutine.yield(true, _281, _281_2)
+        end
+    end)
+    _call11.Heartbeat:Connect(function(...)
+        local _ = genv.ESP
+    end)
+
+    fenv.setupCrosshair = function(...)
+        local _call290 = Drawing.new('Line')
+
+        _call290.Visible = false
+
+        local _ = genv.crosshair
+
+        _call290.Color = _call199
+
+        local _ = genv.crosshair
+
+        _call290.Thickness = 1.5
+
+        local _call294 = Drawing.new('Line')
+
+        _call294.Visible = false
+
+        local _ = genv.crosshair
+
+        _call294.Color = _call199
+
+        local _ = genv.crosshair
+
+        _call294.Thickness = 1.5
+
+        local _call298 = Drawing.new('Line')
+
+        _call298.Visible = false
+
+        local _ = genv.crosshair
+
+        _call298.Color = _call199
+
+        local _ = genv.crosshair
+
+        _call298.Thickness = 1.5
+
+        local _call302 = Drawing.new('Line')
+
+        _call302.Visible = false
+
+        local _ = genv.crosshair
+
+        _call302.Color = _call199
+
+        local _ = genv.crosshair
+
+        _call302.Thickness = 1.5
+
+        local _call306 = Drawing.new('Text')
+
+        _call306.Visible = false
+
+        local _ = genv.crosshair
+
+        _call306.Color = _call199
+        _call306.Size = 16
+        _call306.Center = true
+        _call306.Outline = true
+
+        local _call309 = Drawing.new('Text')
+
+        _call309.Visible = false
+
+        local _ = genv.crosshair
+
+        _call309.Color = _call199
+        _call309.Size = 16
+        _call309.Center = true
+        _call309.Outline = true
+    end
+    fenv.updateCrosshair = function(...)
+        local _ = genv.crosshair
+
+        coroutine.yield(true, 1, _call290)
+        coroutine.yield(true, 2, _call294)
+        coroutine.yield(true, 3, _call298)
+        coroutine.yield(true, 4, _call302)
+        coroutine.yield(true, 1, _call306)
+        coroutine.yield(true, 2, _call309)
+    end
+
+    local _call320 = Drawing.new('Circle')
+
+    _call320.Thickness = 1
+    _call320.Filled = false
+    _call320.Visible = false
+    fenv.spawnButton = function(...)
+        local _call323 = _LocalPlayer12:WaitForChild('PlayerGui')
+        local _call327 = Instance.new('ImageButton')
+
+        _call327.Name = 'LockButton'
+        _call327.Size = UDim2.new(0, 80, 0, 80)
+        _call327.Position = UDim2.new(0.5, -250, 0.8, -225)
+        _call327.Image = 'rbxassetid://114561977260841'
+        _call327.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+        _call327.BackgroundTransparency = 0.45
+        _call327.Parent = _call323:FindFirstChild('LockScreenGui')
+        _call327.Active = true
+        _call327.Draggable = true
+
+        local _call335 = Instance.new('UICorner')
+
+        _call335.CornerRadius = UDim.new(0, 10)
+        _call335.Parent = _call327
+
+        _call327.MouseButton1Click:Connect(function(...)
+            Vector2.new((_workspaceCurrentCamera238.ViewportSize.X / 2), (_workspaceCurrentCamera238.ViewportSize.Y / 2))
+
+            for _352, _352_2 in ipairs(_call9:GetPlayers())do
+                coroutine.yield(true, _352, _352_2)
+            end
+
+            local _ = fenv.Ego
+
+            error("line 3: attempt to index nil with 'Notify'")
+        end)
+    end
+
+    _call11.Heartbeat:Connect(function(...) end)
+    task.spawn(function(...)
+        for _364, _364_2 in ipairs(_call9:GetPlayers())do
+            coroutine.yield(true, _364, _364_2)
+        end
+
+        _call9.PlayerAdded:Connect(function(...)
+            local _369_vararg1 = ...
+            local _ = _369_vararg1 == _LocalPlayer12
+            local _ = _369_vararg1.Character
+            local _Character372 = _369_vararg1.Character
+            local _call374 = _Character372:FindFirstChildOfClass('ForceField')
+
+            _call374:GetPropertyChangedSignal('Visible'):Connect(function(...)
+                local _ = _call374.Visible
+            end)
+            _call374.AncestryChanged:Connect(function(...) end)
+            _Character372.ChildAdded:Connect(function(...)
+                local _388_vararg1 = ...
+
+                _388_vararg1:IsA('ForceField')
+                _388_vararg1:GetPropertyChangedSignal('Visible'):Connect(function(...)
+                    local _ = _388_vararg1.Visible
+                end)
+                _388_vararg1.AncestryChanged:Connect(function(...) end)
+            end)
+            _369_vararg1.CharacterAdded:Connect(function(...)
+                local _404_vararg1 = ...
+
+                _404_vararg1:FindFirstChildOfClass('ForceField'):GetPropertyChangedSignal('Visible')
+                error('internal 579: <25ms: infinitelooperror>')
+            end)
+        end)
+    end)
+    _LocalPlayer12:GetMouse()
+
+    local _callgetrawmetatable412 = getrawmetatable(game)
+    local __namecall413 = _callgetrawmetatable412.__namecall
+
+    setreadonly(_callgetrawmetatable412, false)
+    newcclosure(function(...)
+        local _call416 = __namecall413(...)
+
+        return _call416
+    end)
+
+    _callgetrawmetatable412.__namecall = function(...)
+        local _call418 = __namecall413(...)
+
+        return _call418
+    end
+
+    setreadonly(_callgetrawmetatable412, true)
+    hookmetamethod(game, '__index', function(...)
+        checkcaller()
+        error('line 3: attempt to call a nil value')
+    end)
+    _call11.Heartbeat:Connect(function(...)
+        local _ = genv.autoair
+    end)
+    _call11.RenderStepped:Connect(function(...)
+        local _ = genv.LookAtEnabled
+    end)
+    _call11.RenderStepped:Connect(function(...)
+        _call320.Visible = false
+        _call320.Color = _call189
+        _call320.Radius = 120
+        _call320.Position = Vector2.new((_workspaceCurrentCamera238.ViewportSize.X / 2), (_workspaceCurrentCamera238.ViewportSize.Y / 2))
+
+        local _ = genv.crosshair
+
+        coroutine.yield(true, 1, _call290)
+        coroutine.yield(true, 2, _call294)
+        coroutine.yield(true, 3, _call298)
+        coroutine.yield(true, 4, _call302)
+        coroutine.yield(true, 1, _call306)
+        coroutine.yield(true, 2, _call309)
+
+        local _ = genv.Triggerbot
+    end)
+    _call11.Heartbeat:Connect(function(...) end)
+    _call11.Heartbeat:Connect(function(...) end)
+
+    for _464, _464_2 in pairs(_LocalPlayer12.Character:GetChildren())do
+        coroutine.yield(true, _464, _464_2)
+    end
+
+    _LocalPlayer12.CharacterAdded:Connect(function(...)
+        local _469_vararg1 = ...
+
+        wait()
+
+        local _ = _LocalPlayer12.Character
+
+        _469_vararg1.ChildAdded:Connect(function(...)
+            local _474_vararg1 = ...
+
+            _474_vararg1:IsA('Script')
+            wait(0.25)
+            _474_vararg1:FindFirstChild('LocalScript')
+            _474_vararg1.LocalScript:FireServer()
+        end)
+    end)
+    _call11.Heartbeat:Connect(function(...)
+        local _ = genv.Desync
+    end)
+    _call11.Heartbeat:Connect(function(...)
+        local _ = genv.Desync
+    end)
+
+    for _493, _493_2 in pairs(getgc(true))do
+        coroutine.yield(true, _493, _493_2)
+    end
+
+    _call11.RenderStepped:Connect(function(...)
+        local _call501 = _LocalPlayer12.Character:FindFirstChildOfClass('Tool')
+
+        _call501:FindFirstChild('GunScript')
+
+        for _506, _506_2 in ipairs(getconnections(_call501.Activated))do
+            coroutine.yield(true, _506, _506_2)
+        end
+
+        local _ = genv.Genitaliamanskidslammer
+        local _ = genv.Genitaliamanskidslammer
+    end)
+    _LocalPlayer12.CharacterAdded:Connect(function(...)
+        local _513_vararg1 = ...
+
+        _513_vararg1.ChildAdded:Connect(function(...)
+            local _517_vararg1 = ...
+
+            _517_vararg1:IsA('Tool')
+            task.wait(0.1)
+            _517_vararg1:FindFirstChild('GunScript')
+
+            for _524, _524_2 in ipairs(getconnections(_517_vararg1.Activated))do
+                coroutine.yield(true, _524, _524_2)
+            end
+        end)
+    end)
+    _LocalPlayer12.Backpack.ChildAdded:Connect(function(...)
+        local _530_vararg1 = ...
+
+        _530_vararg1:IsA('Tool')
+        _530_vararg1.Equipped:Connect(function(...)
+            task.wait(0.1)
+            error('internal 579: <25ms: infinitelooperror>')
+        end)
+    end)
+
+    for _541, _541_2 in ipairs(_LocalPlayer12.Backpack:GetChildren())do
+        coroutine.yield(true, _541, _541_2)
+    end
+
+    local _ = _LocalPlayer12.Character
+
+    for _547, _547_2 in ipairs(_LocalPlayer12.Character:GetChildren())do
+        coroutine.yield(true, _547, _547_2)
+    end
+
+    _LocalPlayer12.Backpack.ChildAdded:Connect(function(...)
+        local _553_vararg1 = ...
+
+        _553_vararg1:IsA('Tool')
+
+        local _call557 = _553_vararg1:FindFirstChild('Ammo')
+
+        _call557:IsA('IntValue')
+
+        local _ = _call557.Value
+
+        _call11.Heartbeat:Connect(function(...)
+            local _ = genv.InfiniteAmmo
+        end)
+
+        local _call567 = _553_vararg1:FindFirstChild('Clip')
+
+        _call567:IsA('IntValue')
+
+        local _ = _call567.Value
+
+        _call11.Heartbeat:Connect(function(...)
+            local _ = genv.InfiniteAmmo
+        end)
+    end)
+    _LocalPlayer12.CharacterAdded:Connect(function(...)
+        local _579_vararg1 = ...
+
+        _579_vararg1.ChildAdded:Connect(function(...)
+            error('internal 579: <25ms: infinitelooperror>')
+        end)
+    end)
+
+    genv.BulletTP = {Enabled = false}
+
+    _LocalPlayer12.CharacterAdded:Connect(function(...) end)
+
+    local _ = _LocalPlayer12.Character
+    local _Character590 = _LocalPlayer12.Character
+
+    _Character590.ChildAdded:Connect(function(...) end)
+    _Character590.ChildRemoved:Connect(function(...) end)
+
+    local _602 = loadstring(game:HttpGet('https://raw.githubusercontent.com/DaddyFelixFucks/Lib2/refs/heads/main/Lib2', true))()
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/DaddyFelixFucks/Lib/refs/heads/main/Lib', true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/deividcomsono/Obsidian/main/addons/SaveManager.lua'))()
+
+    local _call612 = _602:CreateWindow({
+        Title = 'Exile.cc [FREE]',
+        Footer = 'Developed By @Felix | Helpers : @8blaq ',
+        NotifySide = 'Right',
+        Icon = 114561977260841,
+        ShowCustomCursor = true,
+    })
+    local _call614 = _call612:AddTab('Home', 'user')
+    local _call616 = _call612:AddTab('Combat', 'swords')
+    local _call618 = _call612:AddTab('Rage', 'zap')
+    local _call620 = _call612:AddTab('Visuals', 'eye')
+    local _call622 = _call612:AddTab('Misc', 'hammer')
+
+    _call612:AddTab('UI Settings', 'settings')
+
+    local _call626 = _call614:AddLeftGroupbox('Player Info')
+    local _call628 = _call614:AddRightGroupbox('Player List')
+    local _call630 = _call614:AddLeftGroupbox('Actions')
+    local _call632 = _call614:AddRightGroupbox('Checks')
+    local _call634 = _call614:AddLeftGroupbox('Library')
+
+    _call626:AddLabel('Name: -')
+    _call626:AddLabel('Display: -')
+    _call626:AddLabel('User ID: -')
+    _call626:AddLabel('Account Age: -')
+    _call626:AddLabel('Membership: -')
+    _call626:AddLabel('Health: -')
+    _call626:AddLabel('Walk Speed: -')
+    _call626:AddLabel('Jump Power: -')
+    _call626:AddLabel('Distance: -')
+
+    for _656, _656_2 in ipairs(_call9:GetPlayers())do
+        coroutine.yield(true, _656, _656_2)
+    end
+
+    _call628:AddDropdown('PlayerList', {
+        Callback = function(...) end,
+        Text = 'Select Player',
+        Default = 1,
+        Values = {},
+    })
+    _call628:AddButton('Refresh List', function(...) end)
+    _call630:AddButton('Teleport to Player', function(...) end)
+    _call630:AddButton('View Player', function(...) end)
+    _call630:AddButton('Reset View', function(...) end)
+    _call630:AddButton('Copy User ID', function(...) end)
+    _call630:AddButton('Set as Target', function(...) end)
+    _call630:AddButton('Clear Target', function(...) end)
+    _call632:AddToggle('WallCheck', {
+        Text = 'Wall Check',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call632:AddToggle('KOCheck', {
+        Text = 'KO Check',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call632:AddToggle('TeamCheck', {
+        Text = 'Team Check',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call632:AddToggle('ForceFieldCheck', {
+        Text = 'ForceField Check',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call634:AddToggle('LibNotifyToggle', {
+        Text = 'Lib Notify',
+        Default = true,
+        Callback = function(...) end,
+    })
+    task.spawn(function(...) end)
+
+    local _call700 = _call616:AddLeftGroupbox('Camlock')
+    local _call702 = _call616:AddRightGroupbox('Target Aim')
+    local _call704 = _call616:AddLeftGroupbox('ForceHit')
+    local _call706 = _call616:AddRightGroupbox('FOV')
+    local _call708 = _call616:AddRightGroupbox('Resolver')
+    local _call710 = _call616:AddLeftGroupbox('Auto Air')
+    local _call712 = _call616:AddLeftGroupbox('Crosshair')
+    local _call714 = _call616:AddRightGroupbox('Triggerbot')
+    local _ = genv.ForceHit
+
+    _call704:AddToggle('ForceHitEnabled', {
+        Text = 'Enable ForceHit',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.ForceHit
+
+    _call704:AddToggle('ForceFieldCheck', {
+        Text = 'ForceField Check',
+        Default = true,
+        Callback = function(...) end,
+    })
+    _call704:AddLabel('Keybind'):AddKeyPicker('ForceHitKeybind', {
+        Default = 'P',
+        Text = 'ForceHit Toggle Key',
+        NoUI = false,
+        Callback = function(...) end,
+        Mode = 'Toggle',
+    })
+
+    local _call729 = _call618:AddLeftGroupbox('Rage Menu')
+    local _call731 = _call618:AddRightGroupbox('CFrame Fly')
+    local _call733 = _call618:AddRightGroupbox('Ammo')
+    local _call735 = _call618:AddLeftGroupbox('Desync')
+    local _call737 = _call618:AddLeftGroupbox('Bullet TP')
+    local _call739 = _call618:AddLeftGroupbox('Kill Aura')
+    local _call741 = _call620:AddLeftGroupbox('ESP')
+    local _call743 = _call620:AddRightGroupbox('ESP Colors')
+
+    _call620:AddLeftGroupbox('Tracers')
+    _call620:AddRightGroupbox('Target Highlight')
+    _call622:AddLeftGroupbox('Jump')
+    _call622:AddLeftGroupbox('CFrame')
+    _call622:AddRightGroupbox('Auto')
+    _call622:AddRightGroupbox('Hitbox Expander')
+    _call622:AddLeftGroupbox('Velocity')
+    _call622:AddRightGroupbox('Anti Lock')
+    _call622:AddRightGroupbox('Anti Ground Shots')
+    _call622:AddLeftGroupbox('Utility')
+    _call622:AddRightGroupbox('Emotes')
+    _call700:AddToggle('CamlockEnabled', {
+        Text = 'Enable Camlock',
+        Default = true,
+        Callback = function(...) end,
+    })
+    _call700:AddInput('CamlockPrediction', {
+        Placeholder = '0.1',
+        Default = '0.1',
+        Numeric = true,
+        Text = 'Prediction',
+        Callback = function(...) end,
+    })
+    _call700:AddInput('Smoothness', {
+        Placeholder = '0.1',
+        Default = '0.1',
+        Numeric = true,
+        Text = 'Smoothness',
+        Callback = function(...) end,
+    })
+    _call700:AddDropdown('EasingStyle', {
+        Callback = function(...) end,
+        Text = 'Easing Style',
+        Default = 'Sine',
+        Values = {
+            [1] = 'Linear',
+            [2] = 'Sine',
+            [3] = 'Back',
+            [4] = 'Quad',
+            [5] = 'Quart',
+            [6] = 'Quint',
+            [7] = 'Bounce',
+            [8] = 'Elastic',
+        },
+    })
+    _call700:AddDropdown('EasingDirection', {
+        Callback = function(...) end,
+        Text = 'Easing Direction',
+        Default = 'InOut',
+        Values = {
+            [1] = 'In',
+            [2] = 'Out',
+            [3] = 'InOut',
+        },
+    })
+    _call700:AddDropdown('CamlockHitPart', {
+        Values = {
+            [1] = 'Head',
+            [2] = 'HumanoidRootPart',
+            [3] = 'UpperTorso',
+            [4] = 'LowerTorso',
+            [5] = 'Random Part',
+        },
+        Text = 'HitPart',
+        Multi = false,
+        Callback = function(...) end,
+        Default = 'HumanoidRootPart',
+    })
+    _call700:AddLabel('Keybind'):AddKeyPicker('CamlockKeybind', {
+        Default = 'C',
+        Text = 'Camlock Toggle Key',
+        ChangedCallback = function(...) end,
+        NoUI = false,
+        Callback = function(...) end,
+        Mode = 'Toggle',
+    })
+    _call700:AddButton('Toggle Button', function(...) end)
+    _call702:AddToggle('SilentEnabled', {
+        Text = 'Enable TargetAim',
+        Default = true,
+        Callback = function(...) end,
+    })
+    _call702:AddInput('Prediction', {
+        Placeholder = '0.125',
+        Default = '0.1257724',
+        Numeric = true,
+        Text = 'Prediction',
+        Callback = function(...) end,
+    })
+    _call702:AddDropdown('SilentMethod', {
+        Values = {
+            [1] = 'Index',
+            [2] = 'Namecall',
+        },
+        Text = 'Method',
+        Multi = false,
+        Callback = function(...) end,
+        Default = 'Index',
+    })
+    _call702:AddDropdown('SilentHitPart', {
+        Values = {
+            [1] = 'Head',
+            [2] = 'HumanoidRootPart',
+            [3] = 'UpperTorso',
+            [4] = 'LowerTorso',
+            [5] = 'Random Part',
+        },
+        Text = 'HitPart',
+        Multi = false,
+        Callback = function(...) end,
+        Default = 'HumanoidRootPart',
+    })
+    game:GetService('ReplicatedStorage'):FindFirstChild('MainEvent')
+
+    local _call810 = game:GetService('RunService')
+    local _ = game:GetService('Players').LocalPlayer
+
+    _call739:AddToggle('KillAura', {
+        Text = 'Kill Aura',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call739:AddToggle('OnLocked', {
+        Text = 'On Locked',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call739:AddSlider('KillAuraDistance', {
+        Min = 10,
+        Default = 50,
+        Max = 400,
+        Text = 'Kill Aura Distance',
+        Callback = function(...) end,
+        Rounding = 0,
+    })
+    _call739:AddLabel('Target: None')
+    _call810.Heartbeat:Connect(function(...) end)
+    _call706:AddToggle('FOVEnabled', {
+        Text = 'Enable FOV',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call706:AddToggle('ShowFOV', {
+        Text = 'Show FOV',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call706:AddToggle('AutoSelectTarget', {
+        Text = 'Auto Select Target',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call706:AddToggle('FOVFilled', {
+        Text = 'Filled',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call706:AddDropdown('FOVMode', {
+        Values = {
+            [1] = 'Mouse',
+            [2] = 'Middle',
+        },
+        Text = 'FOV Mode',
+        Multi = false,
+        Callback = function(...) end,
+        Default = 'Middle',
+    })
+    _call706:AddInput('FOVSize', {
+        Placeholder = '120',
+        Default = '120',
+        Numeric = true,
+        Text = 'FOV Size',
+        Callback = function(...) end,
+    })
+    _call706:AddLabel('FOV Color'):AddColorPicker('FOVColor', {
+        Callback = function(...) end,
+        Title = 'FOV Color',
+        Default = _call189,
+    })
+    _call708:AddToggle('ResolverEnabled', {
+        Text = 'Enable Resolver',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call708:AddDropdown('ResolverMode', {
+        Callback = function(...) end,
+        Text = 'Resolver Mode',
+        Default = 1,
+        Values = {
+            [1] = 'MoveDirection',
+            [2] = 'LookVector',
+            [3] = 'Velocity',
+        },
+    })
+
+    local _ = genv.crosshair
+
+    _call712:AddToggle('crosshair_enabled', {
+        Text = 'Enable Crosshair',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.crosshair
+
+    _call712:AddDropdown('crosshair_mode', {
+        Callback = function(...) end,
+        Text = 'Crosshair Mode',
+        Default = 'center',
+        Values = {
+            [1] = 'Center',
+            [2] = 'Mouse',
+        },
+    })
+
+    local _call867 = _call712:AddLabel('')
+    local _ = genv.crosshair
+
+    _call867:AddColorPicker('crosshair_color', {
+        Callback = function(...) end,
+        Title = 'Crosshair Color',
+        Default = _call199,
+    })
+
+    local _ = genv.crosshair
+
+    _call712:AddSlider('crosshair_radius', {
+        Min = 5,
+        Default = 10,
+        Max = 50,
+        Text = 'Crosshair Radius',
+        Callback = function(...) end,
+        Rounding = 0,
+    })
+
+    local _ = genv.crosshair
+
+    _call712:AddSlider('crosshair_length', {
+        Min = 5,
+        Default = 10,
+        Max = 30,
+        Text = 'Crosshair Length',
+        Callback = function(...) end,
+        Rounding = 0,
+    })
+
+    local _ = genv.crosshair
+
+    _call712:AddSlider('crosshair_width', {
+        Min = 1,
+        Default = 1.5,
+        Max = 5,
+        Text = 'Crosshair Width',
+        Callback = function(...) end,
+        Rounding = 1,
+    })
+
+    local _ = genv.crosshair
+
+    _call712:AddToggle('crosshair_spin', {
+        Text = 'Spin Crosshair',
+        Default = true,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.crosshair
+
+    _call712:AddToggle('crosshair_resize', {
+        Text = 'Resize Crosshair',
+        Default = true,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.Triggerbot
+
+    _call714:AddToggle('ToggletSP', {
+        Text = 'Enable Triggerbot',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call714:AddLabel('Keybind'):AddKeyPicker('TriggerbotKeybind', {
+        Default = 'T',
+        Text = 'Triggerbot Toggle Key',
+        NoUI = false,
+        Callback = function(...) end,
+        Mode = 'Toggle',
+    })
+
+    local _ = genv.Triggerbot
+
+    _call714:AddSlider('TriggerbotDelay', {
+        Min = 0.1,
+        Default = 0.15,
+        Max = 1,
+        Text = 'Triggerbot Delay',
+        Callback = function(...) end,
+        Rounding = 2,
+    })
+
+    local _ = genv.autoair
+
+    _call710:AddToggle('AutoAirEnabled', {
+        Text = 'Auto Air',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call710:AddToggle('AutoPrediction', {
+        Text = 'Auto Prediction',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.LookAtEnabled
+
+    _call710:AddToggle('LookAtEnabled', {
+        Callback = function(...) end,
+        Text = 'Look At',
+    })
+
+    local _call919 = game:GetService('ReplicatedStorage')
+    local _LocalPlayer920 = game:GetService('Players').LocalPlayer
+
+    _LocalPlayer920:GetMouse()
+    _call919:FindFirstChild('MainEvent')
+    _LocalPlayer920.CharacterAdded:Connect(function(...) end)
+
+    local _ = _LocalPlayer920.Character
+
+    _LocalPlayer920.Character:FindFirstChild('Humanoid')
+    _LocalPlayer920.Character:FindFirstChild('Head')
+    _LocalPlayer920.Character.Humanoid:UnequipTools()
+    _LocalPlayer920.Character.ChildAdded:Connect(function(...) end)
+    hookmetamethod(game, '__namecall', function(...) end)
+    _call710:AddToggle('AntiAimViewer', {
+        Text = 'Anti Aim Viewer',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.autoair
+
+    _call710:AddDropdown('AirPart', {
+        Callback = function(...) end,
+        Text = 'Air Part',
+        Values = {
+            [1] = 'HumanoidRootPart',
+            [2] = 'RightFoot',
+            [3] = 'LowerTorso',
+            [4] = 'Head',
+        },
+        Default = 'RightFoot',
+    })
+
+    local _ = genv.autoair
+
+    _call710:AddInput('AirDelay', {
+        Text = 'Air Delay',
+        Default = '0.1',
+        Callback = function(...) end,
+    })
+
+    local _ = genv.Ego
+
+    _call710:AddInput('JumpOffset', {
+        Text = 'Jump Offset',
+        Default = '0.8',
+        Callback = function(...) end,
+    })
+    _call710:AddInput('FallOffset', {
+        Text = 'Fall Offset',
+        Default = '0.22',
+        Callback = function(...) end,
+    })
+
+    local _ = genv.orbit
+
+    _call729:AddToggle('orbit', {
+        Text = 'Enable Orbit',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.orbit
+
+    _call729:AddInput('ortbitz', {
+        Text = 'Orbit Speed',
+        Default = '400',
+        Callback = function(...) end,
+    })
+
+    local _ = genv.orbit
+
+    _call729:AddInput('orbitz', {
+        Text = 'Orbit Height',
+        Default = '5',
+        Callback = function(...) end,
+    })
+
+    local _ = genv.orbit
+
+    _call729:AddInput('oree', {
+        Text = 'Orbit Distance',
+        Default = '10',
+        Callback = function(...) end,
+    })
+    _call729:AddLabel('Orbit Keybind'):AddKeyPicker('OrbitKeybind', {
+        Default = 'H',
+        Text = 'Orbit Toggle Key',
+        NoUI = false,
+        Callback = function(...) end,
+        Mode = 'Toggle',
+    })
+
+    local _ = genv.cfly
+
+    _call731:AddToggle('cflyEnabled', {
+        Text = 'Enable CFrame Fly',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.cfly
+
+    _call731:AddSlider('cflySpeed', {
+        Min = 1,
+        Default = 50,
+        Max = 200,
+        Text = 'Fly Speed',
+        Callback = function(...) end,
+        Rounding = 0,
+    })
+    _call731:AddLabel('Fly Keybind'):AddKeyPicker('CFlyKeybind', {
+        Default = 'F',
+        Text = 'Fly Toggle Key',
+        NoUI = false,
+        Callback = function(...) end,
+        Mode = 'Toggle',
+    })
+
+    local _ = genv.InfiniteAmmo
+
+    _call733:AddToggle('infiniteAmmoToggle', {
+        Text = 'Infinite Ammo',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.Genitaliamanskidslammer
+
+    _call733:AddToggle('RapidFireEnabled', {
+        Text = 'Enable Rapid Fire',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call733:AddLabel('Keybind'):AddKeyPicker('RapidFireKeybind', {
+        Default = 'R',
+        Text = 'Rapid Fire Toggle',
+        NoUI = false,
+        Callback = function(...) end,
+        Mode = 'Toggle',
+    })
+
+    local _ = genv.BulletTP
+
+    _call737:AddToggle('BulletTPEnabled', {
+        Text = 'Enable Bullet TP',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call737:AddLabel('Target: None')
+    _call810.Heartbeat:Connect(function(...) end)
+
+    local _ = genv.Desync
+
+    _call735:AddToggle('DesyncEnabled', {
+        Text = 'Enable Desync',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call735:AddToggle('VoidSpamEnabled', {
+        Text = 'Void Spam',
+        Default = false,
+        Callback = function(...) end,
+    })
+    _call735:AddToggle('FakePosEnabled', {
+        Text = 'Fake Pos',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.ESP
+
+    _call741:AddToggle('NamesToggle', {
+        Text = 'Names',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.ESP
+
+    _call741:AddToggle('BoxesToggle', {
+        Text = 'Boxes',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.ESP
+
+    _call741:AddToggle('HealthBarsToggle', {
+        Text = 'Health Bars',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _ = genv.ESP
+
+    _call741:AddToggle('TeamCheckToggle', {
+        Text = 'Team Check',
+        Default = false,
+        Callback = function(...) end,
+    })
+
+    local _call1049 = _call743:AddLabel('Name Color')
+    local _ = genv.ESP
+
+    _call1049:AddColorPicker('NameColorPicker', {
+        Callback = function(...) end,
+        Title = 'Name Color',
+        Default = _call216,
+    })
+    _call743:AddLabel('Box Color')
+    error('internal 579: <25ms: infinitelooperror>')
+end)
