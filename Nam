@@ -1,0 +1,473 @@
+local genv = getgenv()
+local fenv = getfenv()
+
+fenv.YCRolp__AgpJ = function(...) end
+fenv.tostring = function(...) end
+fenv.print = function(...) end
+fenv.cdgVPMinuITJRfy = function(...) end
+fenv.yfRJTIuniMPVgdc = {
+    [1] = tostring,
+    [2] = print,
+}
+fenv.YCRolp__AgpJ = function(...) end
+
+wait()
+
+fenv.cdgVPMinuITJRfy = nil
+
+local _ = fenv.cdgVPMinuITJRfy
+
+fenv.tostring = tostring
+fenv.print = print
+fenv.MoonSec_StringsHiddenAttr = true
+genv.Ceplex = {
+    Easing = {
+        EasingDirection = Enum.EasingDirection.In,
+        EasingStyle = Enum.EasingStyle.Elastic,
+    },
+    Offsets = {
+        Enabled = false,
+        Fall = 0.9,
+        Jump = -1.9,
+    },
+    Check = {KnockOut = false},
+    Camlock = {
+        Enabled = true,
+        AirSmoothness = 0.13,
+        Smoothness = 0.046,
+        ShakeAmount = 0,
+        AutoPrediction = false,
+        AirPart = 'LowerTorso',
+        Prediction = 0.12588,
+        HitPart = 'Head',
+        AirPrediction = 0.14,
+    },
+    TargetAim = {
+        Prediction = 0.12588,
+        AirSmoothness = 0.13,
+        UseHitChance = true,
+        AirPartEnabled = true,
+        HitChance = 100,
+        TargetPart = 'UpperTorso',
+        AirPart = 'Head',
+        Enabled = true,
+        AirPrediction = 0.15,
+    },
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Pixeluted/adoniscries/main/Source.lua', true))()
+
+local _callgetrawmetatable11 = getrawmetatable(game)
+
+fenv.grm = _callgetrawmetatable11
+
+setreadonly(_callgetrawmetatable11, false)
+
+local __namecall13 = _callgetrawmetatable11.__namecall
+
+fenv.old = __namecall13
+
+newcclosure(function(...)
+    local _14_vararg1, _14_vararg2 = ...
+
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+    tostring(_14_vararg2)
+
+    local _call26 = __namecall13(...)
+
+    return _call26
+end)
+
+_callgetrawmetatable11.__namecall = function(...)
+    local _27_vararg1, _27_vararg2 = ...
+
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+    tostring(_27_vararg2)
+
+    local _call39 = __namecall13(...)
+
+    return _call39
+end
+
+local _ = genv.Ceplex
+local _44 = loadstring(game:HttpGet('https://raw.githubusercontent.com/ICantTapp/Ilikecorn/refs/heads/main/Library.lua'))()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LionTheGreatRealFrFr/MobileLinoriaLib/main/addons/SaveManager.lua'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/LionTheGreatRealFrFr/MobileLinoriaLib/refs/heads/main/addons/ThemeManager.lua'))()
+_44:Notify('Ceplex Executed')
+wait(1)
+_44:Notify('Ceplex Loading')
+wait(1)
+_44:Notify('Ceplex Loaded Successfully')
+wait(0)
+
+local _call62 = _44:CreateWindow({
+    AutoShow = true,
+    Title = 'cuo skid ( 0.0.2b )',
+    Center = true,
+    Size = UDim2.new(0, 400, 0, 400),
+})
+local _call64 = _call62:AddTab('Aim')
+
+_call62:AddTab('@xd1p')
+_44:SetWatermarkVisibility(true)
+
+local _call73 = game:GetService('RunService').RenderStepped:Connect(function(...)
+    local _ = _44.SetWatermark
+
+    math.floor(game:GetService('Stats').Network.ServerStatsItem['Data Ping']:GetValue())
+    error('[string "luau.load(...)"]:1: invalid argument #3 to \'format\' (string expected, got table)')
+end)
+
+_44:OnUnload(function(...)
+    _call73:Disconnect()
+    print('Unloaded!')
+
+    _44.Unloaded = true
+end)
+
+local _call91 = _call64:AddLeftGroupbox('Camlock Assist')
+local _call93 = _call64:AddRightGroupbox('Target Assist')
+local _call95 = _call64:AddLeftGroupbox('Air')
+local _call97 = _call64:AddRightGroupbox('Offsets')
+
+_call91:AddToggle('Enable Camlock', {
+    Callback = function(...)
+        local _ = fenv.Ceplex
+    end,
+    Text = 'Enable Assist Camlock',
+    Default = true,
+    Tooltip = 'Toggle',
+})
+_call91:AddToggle('Enable Auto Prediction', {
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Text = 'Enable Auto Prediction',
+    Default = false,
+    Tooltip = 'Enable',
+})
+_call91:AddInput('Prediction', {
+    Finished = false,
+    Default = 'Prediction',
+    Placeholder = '0.1482',
+    Numeric = true,
+    Text = 'Prediction',
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Prediction for Camlock',
+})
+_call91:AddInput('Smoothness', {
+    Finished = false,
+    Default = 'Smoothness',
+    Placeholder = '0.19',
+    Numeric = true,
+    Text = 'Smoothness',
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Smoothness for Camlock',
+})
+_call91:AddInput('Shake', {
+    Finished = false,
+    Default = 'Shake',
+    Placeholder = '0.1482',
+    Numeric = true,
+    Text = 'Shake',
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Shake for Camlock',
+})
+_call91:AddDropdown('Hit Part', {
+    Values = {
+        [1] = 'Head',
+        [2] = 'UpperTorso',
+        [3] = 'HumanoidRootPart',
+        [4] = 'LowerTorso',
+        [5] = 'LeftUpperArm',
+        [6] = 'RightUpperArm',
+        [7] = 'LeftLeg',
+        [8] = 'RightLeg',
+    },
+    Text = 'Hit-Part',
+    Tooltip = 'Choose the Hit Part for Camlock',
+    Multi = false,
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Default = 1,
+})
+_call91:AddButton('Load Toggle Button', function(...)
+    local _ = fenv.LoadButton
+
+    error('[string "luau.load(...)"]:1: attempt to call a nil value')
+end)
+_call91:AddButton('Load Tool', function(...)
+    local _ = fenv.LoadTool
+
+    error('[string "luau.load(...)"]:1: attempt to call a nil value')
+end)
+_call93:AddToggle('Enable Target Lock', {
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Text = 'Enable Assist Target',
+    Default = true,
+    Tooltip = 'Toggle',
+})
+_call93:AddInput('Prediction', {
+    Finished = false,
+    Default = 'Prediction',
+    Placeholder = '0.1482',
+    Numeric = true,
+    Text = 'Prediction',
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Prediction for Target',
+})
+_call93:AddDropdown('Hit Part', {
+    Values = {
+        [1] = 'Head',
+        [2] = 'UpperTorso',
+        [3] = 'HumanoidRootPart',
+        [4] = 'LowerTorso',
+        [5] = 'LeftUpperArm',
+        [6] = 'RightUpperArm',
+        [7] = 'LeftLeg',
+        [8] = 'RightLeg',
+    },
+    Text = 'Hit-Part',
+    Tooltip = 'Choose the Hit Part for Camlock',
+    Multi = false,
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Default = 1,
+})
+_call95:AddInput('Air Prediction', {
+    Finished = false,
+    Default = 'Air Prediction',
+    Placeholder = '0.1',
+    Numeric = true,
+    Text = 'Air Prediction',
+    Callback = function(...)
+        local _ = genv.Ceplex
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Air Prediction for Camlock and Target',
+})
+_call95:AddInput('Air Smoothness', {
+    Finished = false,
+    Default = 'Air Smoothness',
+    Placeholder = '0.1',
+    Numeric = true,
+    Text = 'Air Smoothness',
+    Callback = function(...)
+        local _ = genv.Ceplex
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Smoothness for Camlock and Target',
+})
+_call97:AddToggle('Enable Offset', {
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Text = 'Enable Offsets',
+    Default = false,
+    Tooltip = 'Toggle',
+})
+_call97:AddInput('Jump Offsets', {
+    Finished = false,
+    Default = 'Jump Offsets',
+    Placeholder = '0.33',
+    Numeric = true,
+    Text = 'Jump Offets',
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Jump Offsets for Camlock and Target',
+})
+_call97:AddInput('Fall Offsets', {
+    Finished = false,
+    Default = 'Fall Offsets',
+    Placeholder = '0.3',
+    Numeric = true,
+    Text = 'Fall Offets',
+    Callback = function(...)
+        local _ = genv.Ceplex
+    end,
+    Tooltip = 'Change Fall Offsets for Camlock and Target',
+})
+game:GetService('TweenService')
+
+local _call175 = game:GetService('StarterGui')
+local _ = game:GetService('Workspace').CurrentCamera
+local _LocalPlayer179 = game:GetService('Players').LocalPlayer
+local _CurrentCamera180 = game:GetService('Workspace').CurrentCamera
+local _call188 = Vector2.new((_CurrentCamera180.ViewportSize.X / 2), (_CurrentCamera180.ViewportSize.Y / 2))
+
+fenv.Notify = function(...)
+    local _189_vararg1 = ...
+
+    _call175:SetCore('SendNotification', {
+        Text = _189_vararg1,
+        Title = 'Notifications',
+        Duration = 5,
+    })
+end
+
+local _ = genv.Loaded
+
+genv.Loaded = true
+
+local _call194 = Drawing.new('Circle')
+
+_call194.Filled = false
+_call194.Transparency = 1
+_call194.Thickness = 1
+_call194.Color = Color3.fromRGB(255, 255, 255)
+_call194.NumSides = 1000
+fenv.LoadButton = function(...)
+    local _call199 = Instance.new('ScreenGui')
+    local _call201 = Instance.new('ImageButton')
+
+    _call199.Name = 'CamlockGui'
+    _call199.Parent = _LocalPlayer179:WaitForChild('PlayerGui')
+    _call199.ResetOnSpawn = false
+    _call201.Size = UDim2.new(0, 100, 0, 100)
+    _call201.Position = UDim2.new(0.5, -55, 0.5, -25)
+    _call201.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
+    _call201.BackgroundTransparency = 1
+    _call201.Image = 'rbxassetid://82797902625849'
+    _call201.Parent = _call199
+    _call201.Active = true
+    _call201.Draggable = true
+
+    local _call211 = Instance.new('UICorner')
+
+    _call211.CornerRadius = UDim.new(0.2, 0)
+    _call211.Parent = _call201
+
+    _call201.InputBegan:Connect(function(...)
+        local _217_vararg1 = ...
+        local _ = _217_vararg1.UserInputType == Enum.UserInputType.MouseButton1
+        local _ = _217_vararg1.UserInputType == Enum.UserInputType.Touch
+    end)
+
+    local _call227 = Instance.new('UICorner')
+
+    _call227.CornerRadius = UDim.new(0.2, 0)
+    _call227.Parent = _call201
+
+    _call201.MouseButton1Click:Connect(function(...)
+        local _ = fenv.getClosest
+
+        error('[string "luau.load(...)"]:1: attempt to call a nil value')
+    end)
+end
+fenv.LoadTool = function(...)
+    local _call237 = Instance.new('Tool')
+
+    _call237.RequiresHandle = false
+    _call237.Name = 'Lock Tool'
+    _call237.Parent = game.Players.LocalPlayer.Backpack
+end
+
+local _LocalPlayer240 = game.Players.LocalPlayer
+local _CharacterAdded241 = _LocalPlayer240.CharacterAdded
+local _ = fenv.onCharacterAdded
+
+_CharacterAdded241:Connect(nil)
+_LocalPlayer240.CharacterRemoving:Connect(function(...)
+    _call237.Parent = game.Players.LocalPlayer.Backpack
+end)
+
+fenv.update = function(...)
+    _call194.Radius = 20
+    _call194.Visible = false
+    _call194.Position = _call188
+end
+fenv.getClosest = function(...)
+    for _257, _257_2 in pairs(game.Players:GetPlayers())do
+        local _ = _257_2 == _LocalPlayer179
+        local _Character259 = _257_2.Character
+
+        _Character259:FindFirstChild('Humanoid')
+
+        local _ = _Character259.Humanoid.Health
+
+        error('[string "luau.load(...)"]:1: attempt to compare number < table')
+    end
+end
+
+_call237.Activated:Connect(function(...) end)
+
+fenv.isVictimKOd = function(...)
+    local _268_vararg1 = ...
+
+    _268_vararg1.Character:FindFirstChild('BodyEffects')
+
+    return _268_vararg1.Character.BodyEffects['K.O'].Value
+end
+fenv.isVictimHealthZero = function(...)
+    local _276_vararg1 = ...
+    local _ = _276_vararg1.Character.Humanoid.Health
+
+    error('[string "luau.load(...)"]:1: attempt to compare table <= number')
+end
+
+game:GetService('RunService').RenderStepped:Connect(function(...)
+    _call194.Radius = 20
+    _call194.Visible = false
+    _call194.Position = _call188
+end)
+
+local _ = game.PlaceId
+local _callgetrawmetatable285 = getrawmetatable(game)
+local __namecall286 = _callgetrawmetatable285.__namecall
+
+setreadonly(_callgetrawmetatable285, false)
+newcclosure(function(...)
+    getnamecallmethod()
+    checkcaller()
+
+    local _call291 = __namecall286(...)
+
+    return _call291
+end)
+
+_callgetrawmetatable285.__namecall = function(...)
+    getnamecallmethod()
+    checkcaller()
+
+    local _call295 = __namecall286(...)
+
+    return _call295
+end
+
+setreadonly(_callgetrawmetatable285, true)
+
+local _ = fenv.aimPart
+
+error('[string "luau.load(...)"]:1: attempt to index nil with \'Position\'')
